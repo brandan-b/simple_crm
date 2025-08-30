@@ -3,6 +3,11 @@
 # Code comments must not use em dashes.
 ActiveAdmin.register Customer do
   permit_params :full_name, :phone_number, :email_address, :notes, :image
+  # Limit filters to simple columns
+  filter :full_name
+  filter :phone_number
+  filter :email_address
+  filter :created_at
 
   index do
     selectable_column
