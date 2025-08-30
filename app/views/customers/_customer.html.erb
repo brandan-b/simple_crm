@@ -1,0 +1,18 @@
+<!-- Code comments must not use em dashes. -->
+<article class="customer-card">
+  <div class="customer-avatar">
+    <% if customer.image.attached? %>
+      <%= image_tag url_for(customer.image), alt: customer.full_name, class: "customer-img" %>
+    <% else %>
+      <div class="customer-placeholder">No Image</div>
+    <% end %>
+  </div>
+  <div class="customer-body">
+    <h2 class="customer-name"><%= customer.full_name %></h2>
+    <p class="customer-line"><strong>Phone:</strong> <%= customer.phone_number.presence || "N/A" %></p>
+    <p class="customer-line"><strong>Email:</strong> <%= customer.email_address.presence || "N/A" %></p>
+    <% if customer.notes.present? %>
+      <p class="customer-notes"><%= simple_format(customer.notes) %></p>
+    <% end %>
+  </div>
+</article>

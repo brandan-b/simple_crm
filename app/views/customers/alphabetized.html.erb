@@ -1,0 +1,13 @@
+<!-- Code comments must not use em dashes. -->
+<h1 class="customers-title">Customers — Alphabetized</h1>
+
+<nav class="customers-nav">
+  <%= link_to "All", "/" %> |
+  <%= link_to "Missing Email", "/customers/missing_email" %>
+</nav>
+
+<div class="customers-grid">
+  <% @customers.each do |customer| %>
+    <%= render partial: "customer", locals: { customer: customer } %>
+  <% end %>
+</div>
