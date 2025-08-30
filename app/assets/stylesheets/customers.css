@@ -1,0 +1,47 @@
+.customer-card {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+.customer-image {
+  margin-right: 16px;
+}
+
+.customer-image img {
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.customer-info h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.2rem;
+}
+
+.customer-info p {
+  margin: 2px 0;
+  font-size: 0.9rem;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #333;
+  padding: 10px 16px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.navbar a {
+  color: #fff;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
