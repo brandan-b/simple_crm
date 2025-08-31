@@ -1,13 +1,13 @@
-<!-- Code comments must not use em dashes. -->
-<h1 class="customers-title">Customers</h1>
-
-<nav class="customers-nav">
-  <%= link_to "Alphabetized", "/customers/alphabetized" %> |
-  <%= link_to "Missing Email", "/customers/missing_email" %>
+<nav class="level">
+  <div class="level-left">
+    <p class="level-item"><%= link_to "All Customers", customers_path, class: "button is-link is-light" %></p>
+    <p class="level-item"><%= link_to "Alphabetized", alphabetized_customers_path, class: "button is-link is-light" %></p>
+    <p class="level-item"><%= link_to "Missing Email", missing_email_customers_path, class: "button is-link is-light" %></p>
+  </div>
 </nav>
 
-<div class="customers-grid">
-  <% @customers.each do |customer| %>
-    <%= render partial: "customer", locals: { customer: customer } %>
-  <% end %>
-</div>
+<h1 class="title is-4">All Customers</h1>
+
+<% @customers.each do |customer| %>
+  <%= render partial: "customer", locals: { customer: customer } %>
+<% end %>
