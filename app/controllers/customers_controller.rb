@@ -1,6 +1,3 @@
-# frozen_string_literal: true
-
-# Code comments must not use em dashes.
 class CustomersController < ApplicationController
   def index
     @customers = Customer.all
